@@ -17,6 +17,9 @@ def resolve_checkpoint_path(ckpt: str | None = None) -> str:
         return ckpt
 
     candidates = [
+        Path(__file__).resolve().parent / "fin" / "best_balanced_ddpfnet_final_try.pth",
+        Path(__file__).resolve().parent / "fin_try" / "best_balanced_ddpfnet_final_try.pth",
+        Path(__file__).resolve().parent / "final_try" / "best_balanced_ddpfnet_final_try.pth",
         Path(__file__).resolve().parent / "lasthope" / "best_balanced_ddpfnet_last_hope.pth",
         Path(__file__).resolve().parent / "last_hope_checkpoint" / "best_balanced_ddpfnet_last_hope.pth",
     ]
