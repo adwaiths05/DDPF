@@ -1,0 +1,73 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# Packaging and test tooling
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+*.egg
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.code-workspace
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Local datasets and machine-specific paths
+data/
+datasets/
+*.mat
+
+# Model checkpoints and training outputs
+*.pth
+*.pt
+*.ckpt
+checkpoints/
+fin/
+fin_try/
+fin_try_baseline/
+op/
+last_hope_checkpoint/
+final_try/
+lasthope/
+
+# Generated evaluation, diagnostic, and inference results
+diagnostics/
+*_results/
+inference_json_results/
+*.csv
+*.png
+*.jpg
+*.jpeg
+
+# Logs and local environment files
+*.log
+.env
+.env.*
+!.env.example

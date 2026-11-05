@@ -17,6 +17,7 @@ def resolve_checkpoint_path(ckpt: str | None = None) -> str:
         return ckpt
 
     candidates = [
+        Path(__file__).resolve().parent / "op" / "best_balanced_ddpfnet_final_try.pth",
         Path(__file__).resolve().parent / "fin" / "best_balanced_ddpfnet_final_try.pth",
         Path(__file__).resolve().parent / "fin_try" / "best_balanced_ddpfnet_final_try.pth",
         Path(__file__).resolve().parent / "final_try" / "best_balanced_ddpfnet_final_try.pth",
@@ -243,7 +244,7 @@ def process_folder(input_dir: str, checkpoint_path: str, threshold: float, min_d
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Run DDPF-Net inference on an image or folder and save JSON results.')
     parser.add_argument('--input', type=str, required=True, help='Path to an image file or a folder of images.')
-    parser.add_argument('--ckpt', type=str, default=None, help='Path to checkpoint. Defaults to lasthope/best_balanced_ddpfnet_last_hope.pth.')
+    parser.add_argument('--ckpt', type=str, default=None, help='Path to checkpoint. Defaults to op/best_balanced_ddpfnet_final_try.pth.')
     parser.add_argument('--thresh', type=float, default=0.30, help='Peak threshold for detection.')
     parser.add_argument('--min_dist', type=int, default=MIN_DISTANCE, help='Minimum distance between detected peaks.')
     parser.add_argument('--output-root', type=str, default='inference_json_results', help='Root folder for saved JSON outputs.')
