@@ -5,7 +5,7 @@ localization. The model uses a Swin-Tiny backbone and produces both a
 density map and a localization heatmap.
 
 The project is designed for the ShanghaiTech Crowd Counting Dataset
-(Part A or Part B).
+(Part B).
 
 ## Features
 
