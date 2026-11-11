@@ -1,0 +1,12 @@
+# configs/ppo.yaml
+# PPO training configuration
+seed: 42
+max_steps: 20000
+log_dir: results/ppo
+device: cuda
+eval_interval: 1000
+learning_rate: 3e-4
+clip_eps: 0.2
+entropy_coef: 0.01
+value_coef: 0.5
+max_grad_norm: 0.5

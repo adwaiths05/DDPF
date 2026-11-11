@@ -1,0 +1,24 @@
+# configs/eval_config.yaml — Evaluation configuration
+evaluation:
+  n_episodes: 20
+  seed_start: 10000       # separate seed range from training
+  device: cpu
+
+policies:
+  - name: shortest_path
+    type: heuristic
+  - name: congestion_aware
+    type: heuristic
+  - name: ppo
+    type: learned
+    checkpoint: results/ppo/ppo_policy_final.pt
+  - name: mappo
+    type: learned
+    checkpoint: results/mappo/mappo_policy_final.pt
+
+scenario_types:
+  - NORMAL
+  - UNEVEN
+  - CONGESTED
+  - EXIT_BLOCKED
+  - HAZARD_ZONE

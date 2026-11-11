@@ -1,0 +1,16 @@
+# configs/env_config.yaml — Environment configuration
+env:
+  max_zones: 15
+  max_neighbors: 6
+  max_steps: 100
+  seed: 42
+
+venue:
+  type: grid           # grid | random | complex
+  rows: 3
+  cols: 3
+  n_exits: 2
+
+crowd:
+  min_occupancy_fraction: 0.2
+  max_occupancy_fraction: 0.8

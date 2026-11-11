@@ -1,36 +1,36 @@
-# Python bytecode and caches
+# Python caches and local tooling
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
 
-# Virtual environments
+# Virtual environments and local Python versions
 .venv/
 venv/
 env/
 ENV/
 .python-version
 
-# Packaging and test tooling
-.Python
+# Packaging and build artifacts
 build/
-develop-eggs/
 dist/
+develop-eggs/
 downloads/
 eggs/
 *.egg-info/
 .eggs/
 pip-wheel-metadata/
 *.egg
-.coverage
-.coverage.*
-htmlcov/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.hypothesis/
 
-# IDE and editor files
+# Editors and operating-system files
 .idea/
 .vscode/
 *.code-workspace
@@ -39,35 +39,39 @@ htmlcov/
 .DS_Store
 Thumbs.db
 
-# Local datasets and machine-specific paths
-data/
-datasets/
-*.mat
-
-# Model checkpoints and training outputs
-*.pth
-*.pt
-*.ckpt
-checkpoints/
-fin/
-fin_try/
-fin_try_baseline/
-op/
-last_hope_checkpoint/
-final_try/
-lasthope/
-
-# Generated evaluation, diagnostic, and inference results
-diagnostics/
-*_results/
-inference_json_results/
-*.csv
-*.png
-*.jpg
-*.jpeg
-
-# Logs and local environment files
-*.log
+# Local configuration and secrets
 .env
 .env.*
 !.env.example
+
+# Datasets and source data kept outside version control
+data/
+datasets/
+ddpf/data/
+rl/data/
+*.mat
+
+# DDPF-Net checkpoints and generated output
+ddpf/fin/
+ddpf/fin_try/
+ddpf/fin_try_baseline/
+ddpf/final_try/
+ddpf/lasthope/
+ddpf/last_hope_checkpoint/
+ddpf/op/
+ddpf/diagnostics/
+ddpf/inference_json_results/
+ddpf/checkpoints/
+
+# Reinforcement-learning checkpoints, logs, and evaluation output
+rl/results/
+rl/checkpoints/
+rl/logs/
+
+# Generic model and experiment artifacts
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.log
+*.csv
